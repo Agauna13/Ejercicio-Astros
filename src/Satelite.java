@@ -4,7 +4,8 @@ public class Satelite extends CuerpoCeleste{
     private float orbitaPlanetaria;
     private String PlanetaQueOrbita;
 
-    public Satelite(String nombre, float masa, float diametro, float velocidadAngular, float semiejeMayor, String planetaQueOrbita) {
+    public Satelite(String nombre, float masa, float diametro, float velocidadAngular,
+                    float semiejeMayor, String planetaQueOrbita) {
         super(nombre, masa, diametro, velocidadAngular, semiejeMayor);
         this.distanciaAlPlaneta = getDistanciaMedia();
         this.orbitaPlanetaria = getDistanciaMedia();
@@ -22,7 +23,8 @@ public class Satelite extends CuerpoCeleste{
                 "\nPlaneta Que Orbita: " + PlanetaQueOrbita;
     }
 
-
+    //Usamos el metodo muestra como método abstracto para poder utilizar el toString de la clase padre para guardar los
+    //datos por defecto y hacer el codigo más entendible
     @Override
     public void muestra() {
         System.out.println(toString());
